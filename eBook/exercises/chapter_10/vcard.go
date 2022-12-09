@@ -43,3 +43,28 @@ My Addresses are:
  &{Elfenstraat 12   2600 Mechelen België}
  &{Heideland 28   2640 Mortsel België}
 */
+
+
+//下面是我的作业
+
+package main
+
+import (
+	"fmt"
+)
+
+type Address struct {
+	addressCode int
+}
+
+type VCard struct {
+	name string
+	addressCode *Address
+	birthday string
+	image string
+}
+
+func main() {
+	Nemo := &VCard{"Nemo",&Address{111},"1994-01-26","xxx"}
+	fmt.Printf("Nemo's name:%s,addressCode:%d,birthday:%s,image:%s",Nemo.name,Nemo.addressCode.addressCode,Nemo.birthday,Nemo.image)
+}
